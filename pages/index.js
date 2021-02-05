@@ -6,6 +6,7 @@ import {
     Grid,
     CssBaseline
 } from '@material-ui/core';
+import PostCard from '../components/PostCard';
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
