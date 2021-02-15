@@ -7,6 +7,7 @@ import {
     CssBaseline
 } from '@material-ui/core';
 import PostCard from '../components/PostCard';
+import blogPosts from '../data/blog-posts';
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
@@ -15,23 +16,23 @@ const useStyles = makeStyles({
     }
 });
 
-const blogPosts = [
-    {
-        name: "blog 1",
-        author: "Peter",
-        desc: "Hello world!",
-    },
-    {
-        name: "blog 2",
-        author: "Jimmy",
-        desc: "Sunny day!",
-    },
-    {
-        name: "blog 3",
-        author: "Anna",
-        desc: "Happy holiday!",
-    },
-]
+// const blogPosts = [
+//     {
+//         name: "blog 1",
+//         author: "Peter",
+//         desc: "Hello world!",
+//     },
+//     {
+//         name: "blog 2",
+//         author: "Jimmy",
+//         desc: "Sunny day!",
+//     },
+//     {
+//         name: "blog 3",
+//         author: "Anna",
+//         desc: "Happy holiday!",
+//     },
+// ]
 
 const Index = () => {
     const classes = useStyles();
@@ -46,7 +47,7 @@ const Index = () => {
                 </Box>
                 <Grid container spacing={4}>
                     {blogPosts.map(post => (
-                        console.log("BLOG POST: ", post)
+                        <PostCard key={post.title} post={post} />
                     ))}
                 </Grid>
             </Container>
