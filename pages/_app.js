@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <React.Fragment>
       <Head>
-        <title>My Blog</title>
+        <title>Next Blog</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"

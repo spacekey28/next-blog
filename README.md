@@ -1,1 +1,4 @@
-# next-blog
+# Blog example with NextJS
+
+
+

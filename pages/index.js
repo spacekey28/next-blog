@@ -16,24 +16,6 @@ const useStyles = makeStyles({
     }
 });
 
-// const blogPosts = [
-//     {
-//         name: "blog 1",
-//         author: "Peter",
-//         desc: "Hello world!",
-//     },
-//     {
-//         name: "blog 2",
-//         author: "Jimmy",
-//         desc: "Sunny day!",
-//     },
-//     {
-//         name: "blog 3",
-//         author: "Anna",
-//         desc: "Happy holiday!",
-//     },
-// ]
-
 const Index = () => {
     const classes = useStyles();
     return (
