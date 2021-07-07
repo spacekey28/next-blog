@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Container,
+  Box
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 
@@ -16,12 +17,63 @@ const useStyles = makeStyles({
     height: '300px',
   },
   buttons: {
-    margin: '15px 0'
+    margin: '15px 0',
+    '& button': {
+      padding: '15px 30px',
+      margin: '10px',
+      border: 'none',
+      outline: 'none',
+      background: 'rgb(202, 194, 194)',
+      borderRadius: '5px',
+      fontSize: '16px',
+      fontWeight: 'bold',
+      cursor: 'pointer',
+    }
   },
   content: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    '& img': {
+      width: '24%',
+      maxWidth: '100%',
+      height: '200px',
+      display: 'block',
+      margin: '0 0.5%',
+      cursor : 'pointer',
+      marginBottom: '10px',
+    }
   },
+  modal: {
+    width: '100vw',
+    height: '100vh',
+    zIndex: '1',
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    background: 'black',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    display: 'none',
+    '& img': {
+      width: '580px',
+      height: '400px',
+      animation: 'scale 1.1s',
+    },
+    '& button': {
+      position: 'absolute',
+      top: '20px',
+      right: '20px',
+      border: 'none',
+      outline: 'none',
+      background: 'white',
+      borderRadius: '5px',
+      fontSize: '16px',
+      fontWeight: 'bold',
+      cursor: 'pointer',
+      padding: '10px 13px',
+    }
+  }
 });
 
 const Popup = () => {
@@ -30,20 +82,22 @@ const Popup = () => {
       <>
         <Container maxWidth="lg" className={classes.container}>
           <h1>Tabs</h1>
-          <div className={classes.buttons}>
+          <Box className={classes.buttons}>
             <button id="all">All</button>
             <button id="nature">Nature</button>
             <button id="cars">Cars</button>
-          </div>
-          <div className={classes.content}>
+          </Box>
+          <Box className={classes.content}>
               <img className="nature" src="https://i.ibb.co/Lv9fDS9/nature1.jpg" alt=""/>
               <img className="nature" src="https://i.ibb.co/XJqn3J9/nature2.jpg" alt=""/>
               <img className="car" src="https://i.ibb.co/SXBSS1X/car1.jpg" alt=""/>
               <img className="car" src="https://i.ibb.co/ysnyMrM/car2.jpg" alt=""/>
-          </div>
+          </Box>
 
-          <button id="close">X</button>
-          <img src="https://i.ibb.co/Lv9fDS9/nature1.jpg" alt=""/>
+          <Box className={classes.modal}>
+            <button id="close">X</button>
+            <img src="https://i.ibb.co/Lv9fDS9/nature1.jpg" alt=""/>
+          </Box>
         </Container>
       </>
   )
