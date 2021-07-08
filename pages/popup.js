@@ -41,6 +41,9 @@ const useStyles = makeStyles({
       margin: '0 0.5%',
       cursor : 'pointer',
       marginBottom: '10px',
+    },
+    '& img:hover': {
+      opacity: '0.6',
     }
   },
   modal: {
