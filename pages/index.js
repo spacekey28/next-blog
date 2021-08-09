@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     flexDirection: 'column',
   },
   container: {
-      minHeight: '80vh'
+      minHeight: '80vh',
   }
 });
 
@@ -36,7 +36,7 @@ const Index = () => {
       <Container maxWidth="lg" className={classes.container}>
         <Box my={4} display="flex" justifyContent="center">
           <Typography variant="h4" component="h1" gutterBottom>
-            Featured Blog posts
+            Blog
           </Typography>
         </Box>
         <Grid container spacing={4}>

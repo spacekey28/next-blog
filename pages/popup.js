@@ -81,12 +81,17 @@ const useStyles = makeStyles({
 
 const Popup = () => {
   const classes = useStyles();
+
+  function handleTabs() {
+    console.log("click");
+  }
+
   return (
       <>
         <Container maxWidth="lg" className={classes.container}>
-          <h1>Tabs</h1>
+          <h1>Masonry Gallery</h1>
           <Box className={classes.buttons}>
-            <button id="all">All</button>
+            <button id="all" onClick={handleTabs}>All</button>
             <button id="nature">Nature</button>
             <button id="cars">Cars</button>
           </Box>
