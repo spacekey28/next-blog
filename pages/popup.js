@@ -82,8 +82,8 @@ const useStyles = makeStyles({
 const Popup = () => {
   const classes = useStyles();
 
-  function handleTabs() {
-    console.log("click");
+  function handleTabs(e) {
+    console.log("Event: ", e);
   }
 
   return (
@@ -92,8 +92,8 @@ const Popup = () => {
           <h1>Masonry Gallery</h1>
           <Box className={classes.buttons}>
             <button id="all" onClick={handleTabs}>All</button>
-            <button id="nature">Nature</button>
-            <button id="cars">Cars</button>
+            <button id="nature" onClick={handleTabs}>Nature</button>
+            <button id="cars" onClick={handleTabs}>Cars</button>
           </Box>
           <Box className={classes.content}>
               <img className="nature" src="https://i.ibb.co/Lv9fDS9/nature1.jpg" alt=""/>
