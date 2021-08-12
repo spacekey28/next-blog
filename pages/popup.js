@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   Box
@@ -81,9 +81,10 @@ const useStyles = makeStyles({
 
 const Popup = () => {
   const classes = useStyles();
+  const [filter, setFilter] = useState('All');
 
   function handleTabs(e) {
-    console.log("Event: ", e);
+    console.log("Event: ", e.target.id);
   }
 
   return (
