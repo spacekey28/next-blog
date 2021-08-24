@@ -84,7 +84,12 @@ const Popup = () => {
   const [filter, setFilter] = useState('All');
 
   function handleTabs(e) {
-    console.log("Event: ", e.target.id);
+    // console.log("Event: ", e.target.id);
+    
+    (e.target.id === 'all') ? setFilter('all') : false;
+    (e.target.id === 'nature') ? setFilter('nature') : false;
+    (e.target.id === 'cars') ? setFilter('cars') : false;
+
   }
 
   return (
