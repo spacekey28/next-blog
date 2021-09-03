@@ -84,7 +84,7 @@ const Popup = () => {
   const [filter, setFilter] = useState('All');
 
   function handleTabs(e) {
-    // console.log("Event: ", e.target.id);
+    console.log("Event: ", e.target.id);
     
     (e.target.id === 'all') ? setFilter('all') : false;
     (e.target.id === 'nature') ? setFilter('nature') : false;
@@ -109,7 +109,7 @@ const Popup = () => {
           </Box>
 
           <Box className={classes.modal}>
-            <button id="close">X</button>
+            <button id="close">Close</button>
             <img src="https://i.ibb.co/Lv9fDS9/nature1.jpg" alt=""/>
           </Box>
         </Container>
